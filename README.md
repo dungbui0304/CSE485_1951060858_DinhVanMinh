@@ -1,2 +1,0 @@
-# test
-làm việc nhóm
