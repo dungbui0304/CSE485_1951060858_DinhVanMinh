@@ -1,5 +1,4 @@
 
-
 body,html {
     width: 100%;
     height: 100%;
@@ -9,7 +8,7 @@ body,html {
     flex-grow: 0;
 }
 .navbar{
-    background-color: #1A3863;
+    background-color: #103c7a;
 }
 
 .carousel-caption {
@@ -18,7 +17,7 @@ body,html {
 }
 
 h1 {
-    text-shadow: 5px 5px 15px #000;
+    /* text-shadow: 5px 5px 15px #000; */
 }
 
 .img-link {
@@ -40,4 +39,91 @@ h1 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden; 
+}
+
+/* info tour */
+.tourTitle {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 700;
+}
+.tourShare {
+    display: flex;
+}
+.rating-star {
+    color: yellow;
+    font-size: 1px;
+}
+.rating-tour {
+    font-size: 6px;
+}
+.box1 {
+    border: solid 1px rgba(0,0,0,.15);
+    padding: 15px;
+    margin-bottom: 25px;
+}
+.name {
+    font-size: 20px;
+    line-height: 24px;
+    color: #1e30da;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: solid 1px rgba(0,0,0,.15);
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+.attr ul li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: inline-table;
+    width: 100%;
+    border-bottom: solid 1px rgba(0,0,0,.15);
+}
+.attr .at {
+    width: 100px;
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+}
+.box2 {
+    background-color: rgb(52, 52, 179);
+    color: #fff;
+}
+.price {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.bot {
+    margin: 10px;
+}
+.txt {
+    font-weight: 700;
+    margin-right: 5px;
+}
+.pri {
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+.btn-order-tour {
+    width: 100%;
+    height: 40px;
+    background: #a2e1e6;
+    color: rgb(191, 1, 248);
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    border-radius: 5px;
+    margin:10px 0;
+}
+.btn-order-tour:hover {
+    background-color: #fff;
 }
