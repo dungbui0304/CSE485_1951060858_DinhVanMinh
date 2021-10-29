@@ -107,7 +107,7 @@
         <div class="col-md-2 "></div>
     </div></br></br>
     <!-- </div> -->
-    <form action="process.php" method="post">
+    <form action="process_bookTour.php" method="post">
         <div class="mda-tilte-3">
             <span class="mda-tilte-name">Thông Tin Liên Hệ</span>
         </div>
