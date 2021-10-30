@@ -142,7 +142,7 @@ ul {
   border-bottom: solid 1px rgba(0,0,0,.15);
 }
 .attr .at {
-  width: 100px;
+  width: 120px;
   float: left;
   font-weight: 700;
   font-size: 16px;
@@ -164,7 +164,7 @@ ul {
   margin-right: 5px;
 }
 .pri {
-  font-size: 20px;
+  font-size: 25px;
   line-height: 33px;
   font-weight: 700;
   margin-right: 5px;
