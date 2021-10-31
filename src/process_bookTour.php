@@ -16,8 +16,7 @@
         echo $sql;
         $result = mysqli_query($conn, $sql);
         if($result == true){
-            echo "Success";
-            //header("location: index.php");
+           header("location: index.php");
         }
         else{
             echo "Error";
