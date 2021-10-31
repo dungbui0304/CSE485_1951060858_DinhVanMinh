@@ -16,10 +16,34 @@ include('header.php');
 </head>
 
 <body>
+    <?php
+    if (isset($_POST['btn'])) {
+        $id_tour = $_POST['txt'];
+    }
+    $conn = mysqli_connect('localhost', 'root', '', 'db_travel');
+    if (!$conn) {
+        die('Unable to connect !');
+    }
+    $sql = "SELECT * FROM info_tour WHERE tour_id = '$id_tour' ";
+    $result = mysqli_query($conn, $sql);
+    if ($result == true) {
+        if (mysqli_num_rows($result) > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $idTour = $row['tour_id'];
+            $time = $row['time'];
+            $starDate = $row['starting_date'];
+            $endDate = $row['ending_date'];
+            $startGate = $row['starting_gate'];
+            $destination = $row['destination'];
+            $price = $row['tour_price'];
+            $traffic = $row['tour_traffic'];
+        }
+    }
+    ?>
     <div class="container">
         <div class="content">
             <div class="wrap">
-                <h1 class="tourTitle">Du lịch Hà Nội - Sapa - Bản Cát Cát - Hàm Rồng dịp Lễ 30/4 từ Hà Nội</h1>
+                <h1 class="tourTitle">Du lịch <?php echo $destination; ?> từ <?php echo $startGate; ?></h1>
                 <div class="tourShare">
                     <div class="rating-star">
                         <i class="fas fa-star"></i>
@@ -29,7 +53,7 @@ include('header.php');
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                     <div class="rating-tour">
-                        <span><b>1.86/5</b>trong <b>6</b> ĐÁNH GIÁ</span>
+                        <span><b>4.5/5</b>trong <b>6</b> ĐÁNH GIÁ</span>
                     </div>
                 </div>
             </div>
@@ -59,46 +83,29 @@ include('header.php');
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="box1">
-                        <div class="name">Du lịch Hà Nội - Sapa - Bản Cát Cát - Hàm Rồng dịp Lễ 30/4 từ Hà Nội</div>
+
+                        <div class="name">Du lịch <?php echo $destination; ?> từ <?php echo $startGate; ?></div>
                         <form class="attr" method="post" action="">
                             <ul>
-                                <?php 
-                                    $conn = mysqli_connect('localhost','root','','db_travel');
-                                    if(!$conn){
-                                        die('Unable to connect !');
-                                    }
-                                    $sql = "SELECT * FROM info_tour ";
-                                    $result = mysqli_query($conn,$sql);
-                                    if(mysqli_num_rows($result) > 0){
-                                        $row = mysqli_fetch_assoc($result);
-                                        $idTour = $row['tour_id'];
-                                        $starDate = $row['starting_date'];
-                                        $endDate = $row['ending_date'];
-                                        $startGate = $row['starting_gate'];
-                                        $destination = $row['destination'];
-                                        $price = $row['tour_price'];
-                                        $traffic = $row['tour_traffic'];
-                                    }
-                                
-                                ?>
+
                                 <li>
                                     <div class="at">Mã tour:</div>
-                                    <div class="as"><?php echo $idTour; ?></div>
+                                    <div class="as"><?php echo $idTour  ?></div>
                                 </li>
                                 <li>
                                     <div class="at">Thời gian:</div>
-                                    <div class="as">3 ngày 2 đêm</div>
+                                    <div class="as"><?php echo $time; ?></div>
                                 </li>
                                 <li>
                                     <div class="at">Khởi hành:</div>
-                                    <div class="as"><?php echo $starDate.'->'.$endDate; ?></div>
+                                    <div class="as"><?php echo date("d/m", strtotime($starDate)) . ' - ' . date("d/m/Y", strtotime($endDate)); ?></div>
                                 </li>
                                 <li>
                                     <div class="at">Xuất phát:</div>
-                                    <div class="as"><?php echo $startGate;?></div>
+                                    <div class="as"><?php echo $startGate; ?></div>
                                 </li>
                                 <li>
-                                    <div class="at">Phương tiện</div>
+                                    <div class="at">Phương tiện </div>
                                     <div class="as"><?php echo $traffic; ?></div>
                                 </li>
                             </ul>
@@ -108,11 +115,11 @@ include('header.php');
                         <div class="boxPrice">
                             <div class="price">
                                 <div class="txt">Giá từ:</div>
-                                <div class="pri"><?php echo $price;?></div>
+                                <div class="pri"><?php echo number_format($price); ?> đ</div>
                             </div>
                             <div class="bot">
-                                <input readonly type="text" name="dDate" id="dDate" class="form-control bg-white date-readonly dropdown-toggle" value="05-11-2021">
-                                <button class="btn-order-tour" type="submit" href="book_tour.php">Đặt tour</button>
+                                <input readonly type="text" name="dDate" id="dDate" class="form-control bg-white" value="<?php echo date("d-m-Y", strtotime($starDate)); ?>">
+                                <a href="bookTour.php"><button class="btn-order-tour" type="submit"> Đặt tour</button></a>
                             </div>
                         </div>
                     </div>
