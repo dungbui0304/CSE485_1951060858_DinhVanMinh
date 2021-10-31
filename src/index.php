@@ -15,42 +15,39 @@
 
 <body>
     <!-- Header -->
-    <div class="container-fluid">
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-                <div class="container-fluid">
-                    <a href="#" class="navbar-brand">
-                        <img src="./assest/img/logo.jpg" height="60px" alt="">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item text-white">
-                                <a class="nav-link text-white active" aria-current="page" href="#">
-                                    <i class="fas fa-home"></i>
-                                    TRANG CHỦ
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="tour.php">
-                                    <i class="fas fa-plane-arrival"></i>TOUR</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">COMBO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
-                            </li>
-                        </ul>
-                    </div>
-            </nav>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="" height="60px" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-white">
+                        <a class="nav-link text-white active" aria-current="page" href="index.php"> 
+                            <i  class="fas fa-home"></i>
+                            TRANG CHỦ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tour.php">
+                            <i class="fas fa-plane-arrival"></i>TOUR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">COMBO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
     <!-- slider -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -101,14 +98,65 @@
                 <a href="#" class="style-link-home">
                     <span class="name-tour">Tour hot </span>
                 </a>
-
             </h3>
             <div class="rulers"></div>
         </div>
+
         <div class="row text-center padding">
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            <?php
+            $conn = mysqli_connect('localhost', 'root', '', 'db_travel');
+            if (!$conn) {
+                die('Unable to connect !');
+            }
+            $sql = "SELECT * FROM info_tour ";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $idTour = $row['tour_id'];
+                    $time = $row['time'];
+                    $starDate = $row['starting_date'];
+                    $endDate = $row['ending_date'];
+                    $startGate = $row['starting_gate'];
+                    $destination = $row['destination'];
+                    $price = $row['tour_price'];
+                    $traffic = $row['tour_traffic'];
+            ?>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <form action="infoTour.php" method="post">
+                            <div class="img-item1">
+                                <button type="submit" name="btn">
+                                    <a href="" class="img-link">
+                                        <img src="./assest/img/tour1.jpg" alt="" class="img">
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="descriptions">
+                                <p class="tittle">Du lịch <?php echo $destination; ?> từ <?php echo $startGate; ?></p>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <p> <i class="fas fa-calendar"></i>Đang cập nhật</p>
+                                        <p> <i class="fas fa-clock"></i>2 ngày 1 đêm</p>
+                                    </div>
+
+                                    <div class="col-md-7">
+                                        <div class="without-price">
+                                        <input readonly class="input" type="text" name="txt"  value="<?php echo $idTour; ?>">
+                                        </div>
+                                        <div class="price font-price">
+                                            <?php echo number_format($price); ?> đ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            <?php
+                }
+            }
+            ?>
+            <!-- <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="img-item1">
-                    <a href="" class="img-link">
+                    <a href="infoTour.php" class="img-link">
                         <img src="./assest/img/tour1.jpg" alt="" class="img">
                     </a>
                 </div>
@@ -128,6 +176,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-xs-12 col-sm-6 col-md-4">
                 <div class="img-item1">
                     <a href="" class="img-link">
@@ -171,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- <hr class="my-4"> -->
     </div>
@@ -181,3 +230,10 @@
 </body>
 
 </html>
+<?php
+if (isset($_POST['clickImg'])) {
+    $idTour1 = $_POST['id'];
+    echo $idTour1;
+}
+
+?>
