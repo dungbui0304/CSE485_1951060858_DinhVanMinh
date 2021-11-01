@@ -58,27 +58,27 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption  d-md-block">
                     <h1>TRAVEL</h1>
                     <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                    <button type="button" class="btn">Tìm kiếm</button>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption  d-md-block">
                     <h1>TRAVEL</h1>
                     <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                    <button type="button" class="btn">Tìm kiếm</button>
 
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption  d-md-block">
                     <h1>TRAVEL</h1>
                     <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn btn-primary">Tìm kiếm</button>
+                    <button type="button" class="btn">Tìm kiếm</button>
                 </div>
             </div>
         </div>
