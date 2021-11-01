@@ -108,7 +108,7 @@
             if (!$conn) {
                 die('Unable to connect !');
             }
-            $sql = "SELECT * FROM info_tour ";
+            $sql = "SELECT * FROM tour_info ";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -120,13 +120,14 @@
                     $destination = $row['destination'];
                     $price = $row['tour_price'];
                     $traffic = $row['tour_traffic'];
+                    $img = $row['img'];
             ?>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <form action="infoTour.php" method="post">
                             <div class="img-item1">
                                 <button type="submit" name="btn">
                                     <a href="" class="img-link">
-                                        <img src="./assest/img/tour1.jpg" alt="" class="img">
+                                        <img src="<?php echo $img; ?>" alt="" class="img">
                                     </a>
                                 </button>
                             </div>
