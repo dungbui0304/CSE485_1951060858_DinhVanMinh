@@ -24,7 +24,7 @@ include('header.php');
     if (!$conn) {
         die('Unable to connect !');
     }
-    $sql = "SELECT * FROM info_tour WHERE tour_id = '$id_tour' ";
+    $sql = "SELECT * FROM tour_info WHERE tour_id = '$id_tour' ";
     $result = mysqli_query($conn, $sql);
     if ($result == true) {
         if (mysqli_num_rows($result) > 0) {
