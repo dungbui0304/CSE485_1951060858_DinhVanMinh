@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 01, 2021 lúc 09:56 AM
+-- Thời gian đã tạo: Th10 01, 2021 lúc 10:46 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -44,9 +44,9 @@ CREATE TABLE `tour_info` (
 --
 
 INSERT INTO `tour_info` (`tour_id`, `tour_price`, `starting_gate`, `destination`, `starting_date`, `ending_date`, `time`, `tour_traffic`, `img`) VALUES
-(1, 3499000, 'Hồ Chí Minh', 'Đà Nẵng - Ngũ Hành Sơn - Bà Nà - Phố Cổ Hội An', '2021-11-01', '2021-11-03', '3 ngày 2 đêm', 'Xe du lịch, Máy bay  ', 'upload/da-nang-ngu-hanh-son.jpg'),
-(2, 4699000, 'Hồ Chí Minh', 'Đà Nẵng - Huế - Thánh Địa La Vang - Động Phong Nha', '2021-11-04', '2021-11-08', '4 ngày 3 đêm', 'Xe du lịch, máy bay', 'upload/da-nang-hoi-an-hue.jpg'),
-(3, 4899000, 'Hồ Chí Minh', 'Đà Nẵng - Huế - Thánh Địa La Vang - Động Thiên Đường', '2021-11-02', '2021-11-04', '2 ngày 1 đêm', 'Xe du lịch, máy bay', 'upload/da-nang-hoi-an.jpg');
+(1, 3499000, 'Hồ Chí Minh', 'Đà Nẵng - Ngũ Hành Sơn - Bà Nà - Phố Cổ Hội An', '2021-11-01', '2021-11-03', '3 ngày 2 đêm', 'Xe du lịch, Máy bay  ', 'assest/img/da-nang-ngu-hanh-son.jpg'),
+(2, 4699000, 'Hồ Chí Minh', 'Đà Nẵng - Huế - Thánh Địa La Vang - Động Phong Nha', '2021-11-04', '2021-11-08', '4 ngày 3 đêm', 'Xe du lịch, máy bay', 'assest/img/da-nang-hoi-an-hue.jpg'),
+(3, 4899000, 'Hồ Chí Minh', 'Đà Nẵng - Huế - Thánh Địa La Vang - Động Thiên Đường', '2021-11-02', '2021-11-04', '2 ngày 1 đêm', 'Xe du lịch, máy bay', 'assest/img/da-nang-hoi-an.jpg');
 
 --
 -- Chỉ mục cho các bảng đã đổ
