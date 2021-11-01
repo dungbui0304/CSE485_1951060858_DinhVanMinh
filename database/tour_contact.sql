@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 25, 2021 lúc 11:28 AM
+-- Thời gian đã tạo: Th10 01, 2021 lúc 09:56 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contact`
+-- Cấu trúc bảng cho bảng `tour_contact`
 --
 
-CREATE TABLE `contact` (
+CREATE TABLE `tour_contact` (
   `full_name` varchar(255) NOT NULL,
   `phone` varchar(10) NOT NULL,
   `email` varchar(255) NOT NULL,

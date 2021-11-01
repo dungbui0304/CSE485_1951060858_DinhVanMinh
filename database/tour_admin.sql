@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 25, 2021 lúc 11:28 AM
+-- Thời gian đã tạo: Th10 01, 2021 lúc 09:56 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Cấu trúc bảng cho bảng `tour_admin`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `tour_admin` (
   `id` varchar(255) NOT NULL,
   `user_name` varchar(255) NOT NULL,
   `full_name` varchar(255) NOT NULL,
@@ -36,13 +36,20 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Đang đổ dữ liệu cho bảng `tour_admin`
+--
+
+INSERT INTO `tour_admin` (`id`, `user_name`, `full_name`, `password`, `status`) VALUES
+('abc', 'Admin', 'Aministrator', 'abc', 1);
+
+--
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `admin`
+-- Chỉ mục cho bảng `tour_admin`
 --
-ALTER TABLE `admin`
+ALTER TABLE `tour_admin`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 
