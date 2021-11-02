@@ -60,12 +60,6 @@ button {
   border: none;
   background-color: white;
 }
-.input {
-  border: none;
-  outline: none;
-  margin-left: 40px;
-  color: white !important;
-}
 .price {
   align-items: center;
   padding: 10px;
