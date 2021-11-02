@@ -44,7 +44,7 @@
                                 <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="login.php"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
+                                <a class="nav-link text-white" href="src/admin/login.php"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
                             </li>
                         </ul>
                     </div>

@@ -1,12 +1,13 @@
 <?php
     if(isset($_POST['btnRegister'])){
-        $fullName = $_POST['txtName'];
+        $fullname = $_POST['txtFullname'];
+        $name = $_POST['txtName'];
         $email = $_POST['txtEmail'];
         $pass1 = $_POST['txtPass01'];
         $pass2 = $_POST['txtPass02'];
         $phone = $_POST['txtPhone'];
         $date = $_POST['txtDate'];
-        if(empty($fullName) or empty($email) or empty($pass1) or empty($pass2) or empty($phone) or empty($phone)) {
+        if(empty($fullname) or empty($name) or empty($email) or empty($pass1) or empty($pass2) or empty($phone) or empty($date)) {
             echo '<script language="javascript">alert("Vui lòng nhập đủ thông tin");window.location="register.php";</script>';
             die();
         }
@@ -34,7 +35,8 @@ if(mysqli_num_rows($result) > 0) {
 }   
 
 else{
-    $sql2 = "INSERT INTO tour_user(user_fullName, user_email, user_pass, user_phone, user_registerDate) VALUES('$fullName','$email','$pass1','$phone','$date') ";
+    $sql2 = "INSERT INTO tour_user(user_fullName, user_name, user_email, user_pass, user_phone, user_registerDate) 
+    VALUES('$fullname','$name','$email','$pass1','$phone','$date') ";
     $result2 = mysqli_query($conn, $sql2);
 
     if($result2 >= 1 ){

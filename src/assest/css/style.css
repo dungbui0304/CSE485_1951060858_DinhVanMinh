@@ -1,7 +1,4 @@
 body,
-.body{
-  background-color: #dcdde1;
-}
 html {
   width: 100%;
   height: 100%;
@@ -59,8 +56,22 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
-
-/* Css for test */
+button {
+  border: none;
+  background-color: white;
+}
+.price {
+  align-items: center!important;
+  padding: 10px!important;
+}
+.font-price {
+  color: #e30051;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  height: 26px;
+}
+/* Css for bookTour.php */
 .mda-tilte-name {
   font-size: 30px;
   line-height: 40px;

@@ -139,7 +139,7 @@
 
                                     <div class="col-md-7">
                                         <div class="without-price">
-                                        <input readonly class="input" type="text" name="txt"  value="<?php echo $idTour; ?>">
+                                        <input readonly type="hidden" name="txt"  value="<?php echo $idTour; ?>">
                                         </div>
                                         <div class="price font-price">
                                             <?php echo number_format($price); ?> đ

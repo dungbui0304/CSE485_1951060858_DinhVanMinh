@@ -15,9 +15,9 @@
 <div class="container wrapper">
         <div class="wrap">
             <form action="process_login.php" method="post"class="form text-center">
-                <div class="title">Login</div>
+                <div class="title">Login User</div>
                 <div class="user">
-                    <input class="input" type="text" name="txtName" value="" placeholder="User Name">
+                    <input class="input" type="text" name="txtName" value="" placeholder="Name">
                 </div>
                 <div class="psw">
                     <input class="input border-top" type="password" name="txtPass" value="" placeholder="Password">

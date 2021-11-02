@@ -4,6 +4,11 @@
     if(isset($_POST['btnLogin'])){
         $username = $_POST['txtName'];
         $password = $_POST['txtPass'];
+        if(empty($password) or empty($username)){
+            echo '<script type="text/javascript"> alert("Vui lòng nhập đầy đủ thông tin ");
+            window.location="login.php"</script>';
+            die();
+        }
         try{
             $conn = new PDO("mysql:host=localhost;dbname=db_travel", 'root', '');
         }catch(PDOException $e){
@@ -14,8 +19,9 @@
         $stmt->bindParam(':pass', $password, PDO::PARAM_STR);
         $stmt->execute();
         if($stmt->rowCount() > 0){
-            $_SESSION['loginOK'] = $username;
-            header("Location: index.php");
+            $_SESSION['loginOK'] = '';
+            echo '<script type="text/javascript"> alert("Đăng nhập thành công ");
+            window.location="dashboard.php";</script>';
         }else{
             header("Location: login.php");
         }

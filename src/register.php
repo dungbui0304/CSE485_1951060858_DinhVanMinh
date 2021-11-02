@@ -15,10 +15,13 @@
             <form action="process_register.php" method="post" class="form text-center">
                 <div class="title">Register</div>
                 <div class="user_fullName">
-                    <input class="input" type="text" name="txtName" value="" placeholder="Full_name">
+                    <input class="input" type="text" name="txtFullname" value="" placeholder="Full Name">
+                </div>
+                <div class="user_name">
+                    <input class="input" type="text" name="txtName" value="" placeholder="Name">
                 </div>
                 <div class="email">
-                    <input class="input" type="text" name="txtEmail" value="" placeholder="Email">
+                    <input class="input" type="email" name="txtEmail" value="" placeholder="Email">
                 </div>
                 <div class="psw">
                     <input class="input border-top" type="password" name="txtPass01" value="" placeholder="Password">
@@ -30,7 +33,7 @@
                     <input class="input border-top" type="text" name="txtPhone" value="" placeholder="Phone">
                 </div>
                 <div class="user_registerDate">
-                    <input class="input border-top" type="text" name="txtDate" value="" placeholder="Register Date">
+                    <input class="input border-top" type="date" name="txtDate" value="" placeholder="Register Date">
                 </div>
                 <button class="btn btn-log" type="submitRegiter" name="btnRegister">SIGN UP</button>
             </form>

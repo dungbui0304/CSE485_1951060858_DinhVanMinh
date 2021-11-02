@@ -43,7 +43,7 @@
                                 <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="login.php"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
+                                <a class="nav-link text-white" href="src/admin/login.php"><i class="fas fa-user"></i>ADMIN</a>
                             </li>
                         </ul>
                     </div>
@@ -74,6 +74,9 @@
                             <div class="carousel-item active">
                                 <img src="./assest/img/tour1.jpg" class="d-block w-100" alt="...">
                             </div>
+
+
+                            
                             <div class="carousel-item">
                                 <img src="./assest/img/tour2.jpg" class="d-block w-100" alt="...">
                             </div>

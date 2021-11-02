@@ -1,14 +1,9 @@
 <?php
-session_start(); 
-$_SESSION = array();
-if (ini_get("session.use_cookies")) {
-    $params = session_get_cookie_params();
-    setcookie(session_name(), '', time() - 60*60,
-        $params["path"], $params["domain"],
-        $params["secure"], $params["httponly"]
-    );
-}
-unset($_SESSION['alogin']);
-session_destroy(); // destroy session
-header("location:index.php"); 
-?>
+    session_start(); //Dịch vụ bảo vệ
+    if(isset($_SESSION['loginOK'])){
+        unset($_SESSION['loginOK']);
+        echo '<script type="text/javascript"> alert("Xác thực");
+            window.location="login.php"</script>';
+    }
+
+?> 
