@@ -26,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item text-white">
-                        <a class="nav-link text-white active" aria-current="page" href="index.php"> 
-                            <i  class="fas fa-home"></i>
+                        <a class="nav-link text-white active" aria-current="page" href="index.php">
+                            <i class="fas fa-home"></i>
                             TRANG CHỦ
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="tour.php">
+                        <a class="nav-link text-white" href="" >
                             <i class="fas fa-plane-arrival"></i>TOUR</a>
                     </li>
                     <li class="nav-item">
@@ -94,8 +94,8 @@
     <!-- Locations -->
     <div class="container">
         <div class="col-md-12  hp-title">
-            <h3 class="title-inline page_speed_1758259825">
-                <a href="#" class="style-link-home">
+            <h3 class="title-inline " >
+                <a href="" class="style-link-home">
                     <span class="name-tour">Tour hot </span>
                 </a>
             </h3>
@@ -141,7 +141,7 @@
 
                                     <div class="col-md-7">
                                         <div class="without-price">
-                                        <input readonly  type="hidden" name="txt"  value="<?php echo $idTour; ?>">
+                                            <input readonly type="hidden" name="txt" value="<?php echo $idTour; ?>">
                                         </div>
                                         <div class="price font-price">
                                             <?php echo number_format($price); ?> đ
@@ -155,7 +155,7 @@
                 }
             }
             ?>
-            
+
         </div>
     </div>
 
