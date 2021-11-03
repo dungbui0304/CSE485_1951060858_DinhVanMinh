@@ -7,11 +7,13 @@
         $ending_date =$_POST['ending-date'];
         $time =$_POST['time'];
         $tour_traffic =$_POST['traffic'];
-        $img =$_FILES["image"]["name"];
-        move_uploaded_file($_FILES["image"]["tmp_name"],"image/".$_FILES["image"]["name"]);
+        $description =$_POST['des'];
+        echo $description;
+        $img = 'assest/img/'.$_FILES["image"]["name"];
+        move_uploaded_file($_FILES["image"]["tmp_name"],"../assest/img/".$_FILES["image"]["name"]);
     include('include/config.php');
-    $sql = "INSERT INTO tour_info (tour_price,starting_gate,destination,starting_date,ending_date,time,tour_traffic)
-                            VALUES($tour_price,$starting_gate,$destination,$starting_date,$ending_date,$time,$tour_traffic)";
+    $sql = "INSERT INTO tour_info (tour_price,starting_gate,destination,starting_date,ending_date,time,tour_traffic,description,img)
+    VALUES('$tour_price','$starting_gate','$destination','$starting_date','$ending_date','$time','$tour_traffic','$description','$img')";
     $result = mysqli_query($conn,$sql);
     if($result == true){
         header('Location:dashboard.php');
@@ -20,8 +22,6 @@
     }
 }
 ?>
-
-
 <!doctype html>
 <html lang="en">
 
@@ -54,7 +54,7 @@
                     </div>
                     <div class="wrap-form">
                         <h3 style="color: #1b93e1;font-size: 2em;margin-bottom: 1em;">Create Package</h3>
-                        <form method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             <div class="group">
                                 <div class="form-group">
                                     <label class="col-sm-2 form-label" for="">Tour Price</label>
@@ -92,6 +92,10 @@
                                         placeholder="Tour Traffic" require>
                                 </div>
                                 <div class="form-group">
+                                    <label for class="col-sm-2 form-label" for="">Description</label>
+                                    <textarea class="col-sm-8 form-input" name="des" id="" cols="5" rows="5" placeholder="Description" require></textarea>
+                                </div>
+                                <div class="form-group">
                                     <label for class="col-sm-2 form-label" for="">Image</label>
                                     <input class="col-sm-8 form-input" name="image" style="border:none;" type="file"
                                         placeholder=" Image" require>
@@ -102,7 +106,6 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <button type="submit" name="submit" class="btn-primary btn">Create</button>
-                                    <button type="reset" class="btn-secondary btn">Reset</button>
                                 </div>
 
                             </div>
@@ -111,6 +114,8 @@
 
                     </div>
                 </div>
+                <?php include('include/footer.php') ?>
+
             </div>
 
         </div>

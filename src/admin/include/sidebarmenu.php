@@ -30,11 +30,6 @@
             <li><a href="manage-bookings.php"><i class="fa fa-bars" aria-hidden="true"></i> <span>Manage Booking</span>
                     <div class="clearfix"></div>
                 </a></li>
-            <li><a href="manageissues.php"><i class="fa fa-table"></i> <span>Manage Issues</span>
-                    <div class="clearfix"></div>
-                </a></li>
-
-
         </ul>
     </div>
 </div>
