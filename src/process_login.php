@@ -14,14 +14,14 @@
         }catch(PDOException $e){
             echo "Có lỗi: ".$e->getMessage();
         }   
-        $stmt = $conn->prepare("SELECT * FROM tour_user WHERE user_name or user_email= :user AND user_pass= :pass"); 
+        $stmt = $conn->prepare("SELECT * FROM tour_user WHERE user_name or user_email = :user AND user_pass= :pass"); 
         $stmt->bindParam(':user', $username, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $password, PDO::PARAM_STR);
         $stmt->execute();
         if($stmt->rowCount() > 0){
             $_SESSION['loginOK'] = $username;
             echo '<script type="text/javascript"> alert("Đăng nhập thành công ");
-            window.location="index.php";</script>';
+            window.location="bookTour.php";</script>';
         }else{
             header("Location: login.php");
         }

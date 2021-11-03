@@ -34,14 +34,8 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="infoTour.php">
+                                <a class="nav-link text-white" href="index.php">
                                     <i class="fas fa-plane-arrival"></i>TOUR</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">COMBO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="src/admin/login.php"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
@@ -137,12 +131,8 @@
                     </div>
 
                     <div class="form-group col-md-4">
-                        <label for="l">Người lớn: </label>
-                        <input type="number" name="QAdult" class="form-control " value="1" min="1" max="20">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label>Trẻ em : </label>
-                        <input type="number" name="QChild" class="form-control " min="0" value="0">
+                        <label for="l">Số lượng người: </label>
+                        <input type="number" name="txtNumber" class="form-control " value="1" min="1" max="20">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="slphongdon">Số lượng phòng đơn </label>

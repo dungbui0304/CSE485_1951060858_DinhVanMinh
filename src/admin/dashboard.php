@@ -1,13 +1,5 @@
-<?php
-session_start(); //Dịch vụ bảo vệ
-if (!isset($_SESSION['loginOK'])) {
-    header("Location: login.php");
-}
-$conn = mysqli_connect('localhost', 'root', '', 'db_travel');
-if (!$conn) {
-    die("Không thể kết nối");
-}
-?>
+<?php include('include/session.php') ?>
+<?php include('include/config.php') ?>
 <!doctype html>
 <html lang="en">
 

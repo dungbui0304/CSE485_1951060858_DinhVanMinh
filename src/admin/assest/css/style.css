@@ -188,3 +188,8 @@
 .box5 {
     background: #8e44ad;
 }
+/*tour package*/
+img, svg {
+    vertical-align: middle;
+    width: 100px !important;
+}

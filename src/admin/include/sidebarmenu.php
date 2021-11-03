@@ -19,7 +19,7 @@
                 </a>
                 <ul id="menu-academico-sub">
                     <li id="menu-academico-avaliacoes"><a href="create-package.php">Create</a></li>
-                    <li id="menu-academico-avaliacoes"><a href="manage-packages.php">Manage</a></li>
+                    <li id="menu-academico-avaliacoes"><a href="manage_tourPackage.php">Manage</a></li>
                 </ul>
             </li>
             <li id="menu-academico"><a href="manage_user.php"><i class="fa fa-users"
@@ -27,7 +27,7 @@
                     <div class="clearfix"></div>
                 </a></li>
 
-            <li><a href="manage-bookings.php"><i class="fa fa-bars" aria-hidden="true"></i> <span>Manage Booking</span>
+            <li><a href="manage_booking.php"><i class="fa fa-bars" aria-hidden="true"></i> <span>Manage Booking</span>
                     <div class="clearfix"></div>
                 </a></li>
             <li><a href="manageissues.php"><i class="fa fa-table"></i> <span>Manage Issues</span>

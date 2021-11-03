@@ -13,7 +13,8 @@
     <title>Travel Web</title>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container-fluid">
             <a href="#" class="navbar-brand">
                 <img src="" height="60px" alt="">
@@ -24,20 +25,16 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item text-white">
-                        <a class="nav-link text-white active" aria-current="page" href="index.php"> 
-                            <i  class="fas fa-home"></i>
-                             TRANG CHỦ
+                        <a class="nav-link text-white active" aria-current="page" href="index.php">
+                            <i class="fas fa-home"></i>
+                            TRANG CHỦ
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="tour.php">
-                            <i class="fas fa-plane-arrival"></i> TOUR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#"> COMBO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#"> KHÁCH SẠN</a>
+                        <a class="nav-link text-white active" href="#Tour">
+                            <i class="fas fa-plane-arrival"></i>
+                            TOUR
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="admin/login.php"><i class="fas fa-user"></i> ADMIN</a>
@@ -92,8 +89,8 @@
     <!-- Locations -->
     <div class="container">
         <div class="col-md-12  hp-title">
-            <h3 class="title-inline page_speed_1758259825">
-                <a href="#" class="style-link-home">
+            <h3 class="title-inline " id="Tour">
+                <a href="" class="style-link-home">
                     <span class="name-tour">Tour hot </span>
                 </a>
             </h3>
@@ -139,7 +136,7 @@
 
                                     <div class="col-md-7">
                                         <div class="without-price">
-                                        <input readonly type="hidden" name="txt"  value="<?php echo $idTour; ?>">
+                                            <input readonly type="hidden" name="txt" value="<?php echo $idTour; ?>">
                                         </div>
                                         <div class="price font-price">
                                             <?php echo number_format($price); ?> đ

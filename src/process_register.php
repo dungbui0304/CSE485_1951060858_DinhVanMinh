@@ -35,8 +35,9 @@ if(mysqli_num_rows($result) > 0) {
 }   
 
 else{
+    $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
     $sql2 = "INSERT INTO tour_user(user_fullName, user_name, user_email, user_pass, user_phone, user_registerDate) 
-    VALUES('$fullname','$name','$email','$pass1','$phone','$date') ";
+    VALUES('$fullname','$name','$email','$pass_hash','$phone','$date') ";
     $result2 = mysqli_query($conn, $sql2);
 
     if($result2 >= 1 ){
