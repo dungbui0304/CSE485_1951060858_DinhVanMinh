@@ -45,7 +45,7 @@ h1 {
 .tourTitle {
     font-size: 28px;
     line-height: 40px;
-    font-weight: 700;
+    /* font-weight: 700; */
 }
 .tourShare {
     display: flex;
@@ -142,10 +142,9 @@ ul {
     align-items: center;
 }
 .wrap{
-    width: 460px;
+    /* width: 460px; */
     background-color:#fff ;
     border-radius: 4px;
-    margin-top: 150px;
 }
 .title {
     font-size: 30px;
@@ -195,4 +194,102 @@ ul {
 }
 .text-link {
     text-decoration: none;
+}
+
+
+/* css book tour */
+.mda-tilte-name {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .mda-tilte-3 {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .form-group {
+  margin-bottom: 15px;
+  }
+  .row {
+  margin-left: -10px;
+  margin-right: -10px;
+  }
+  label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+  }
+  .text_area {
+  height: 34px;
+  }
+  .txtTotal {
+    text-align: right;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: solid 1px rgba(0,0,0,.15);
+    margin-bottom: 40px;
+  }
+  /* span {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+  } */
+
+
+/* Css description info_tour */
+.title-des {
+    font-size: 20px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgba(0,0,0,.15);
+}
+.content p {
+    text-align: justify;
+    font-size: 16px;
+}
+
+
+/* css footer */
+.title-bot {
+    color: #1b448e;
+    font-size: 18px;
+    font-weight: 500;
+}
+.boxBot {
+    margin-bottom: 10px;
+}
+.be , 
+.bot-link ,
+.content {
+    font-size: 14px;
+}
+.email {
+    outline: none;
+    width: 70%;
+}
+.social-link {
+    display: flex;
+}
+.link {
+    font-size: 30px;
+    padding: 14px;
+}
+.link-bot {
+    text-decoration: none;
+    color: #1b448e;
+}
+.copyright {
+    display: flex;
+}
+.copy {
+    align-items: center;
+    font-style: italic;
+    font-size: 12px;
+    padding: 20px;
 }
