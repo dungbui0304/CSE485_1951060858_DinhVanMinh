@@ -1,22 +1,26 @@
-<?php
-include 'header.php';
-?>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tìm kiếm tour</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assest/fonts/fontawesome-free-5.15.4/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="./assest/css/style.css">
+    <title>Travel Web</title>
 </head>
 
 <body>
+    <!-- Header -->
+    <?php include('header.php') ?>
     <div class="carousel-inner">
         <section class="food-search text-center">
             <div class="container">
                 <form action="process_search.php" method="POST">
-                    <input type="search" name="search" placeholder="Search for Tour.." required>
+                    <input type="search" name="search" placeholder="Nhập địa điểm xuất phát" required>
                     <input type="submit" name="submit" value="Search" class="btn btn-primary">
                 </form>
             </div>
@@ -47,7 +51,7 @@ include 'header.php';
                 ?>
                         <div class="row room-btm">
                             <div class="col-md-3 room-left">
-                                <img src="<?php echo $img; ?>" alt="" class="img-responsive img-list">
+                                <a href="infoTour.php?id=<?php echo $idTour; ?>"><img src="<?php echo $img; ?>" alt="" class="img-responsive img-list"></a>
                             </div>
                             <div class="col-md-9 room-right ">
                                 <div class="at">
@@ -90,14 +94,11 @@ include 'header.php';
                             <div class="clearfix"></div>
                         </div>
                 <?php }
-                } else{
-                    echo 'Không tìm thấy';
-                }
-                
-                ?>
+                } ?>
             </div>
         </div>
     </div>
+    <?php include('footer.php') ?>
 </body>
 
 </html>

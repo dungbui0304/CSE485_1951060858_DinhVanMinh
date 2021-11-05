@@ -1,6 +1,3 @@
-<?php
-include('header.php');
-?>
 <!doctype html>
 <html lang="en">
 
@@ -16,9 +13,18 @@ include('header.php');
 </head>
 
 <body>
+    <!-- Header -->
+    <div class="container-fluid">
+        <div class="row">
+        <?php include('header.php') ?>
+        </div>
+    </div>
     <?php
     if (isset($_POST['btn'])) {
         $id_tour = $_POST['txt'];
+    }
+    if(isset($_GET['id'])){
+        $id_tour = $_GET['id'];
     }
     $conn = mysqli_connect('localhost', 'root', '', 'db_travel');
     if (!$conn) {
@@ -37,6 +43,7 @@ include('header.php');
             $destination = $row['destination'];
             $price = $row['tour_price'];
             $traffic = $row['tour_traffic'];
+            $img = $row['img'];
         }
     }
     ?>
@@ -52,9 +59,6 @@ include('header.php');
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star-half-alt"></i>
                     </div>
-                    <div class="rating-tour">
-                        <span><b>4.5/5</b>trong <b>6</b> ĐÁNH GIÁ</span>
-                    </div>
                 </div>
             </div>
             <div class="row">
@@ -62,14 +66,14 @@ include('header.php');
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="./assest/img/tour-slider1.jpg" class="d-block w-100" alt="...">
+                                <img src="<?php echo $img; ?>" class="d-block w-100" alt="...">
                             </div>
-                            <div class="carousel-item">
+                            <!-- <div class="carousel-item">
                                 <img src="./assest/img/tour-slider2.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
                                 <img src="./assest/img/tour-slider3.jpg" class="d-block w-100" alt="...">
-                            </div>
+                            </div> -->
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -119,7 +123,7 @@ include('header.php');
                             </div>
                             <div class="bot">
                                 <input readonly type="text" name="dDate" id="dDate" class="form-control bg-white" value="<?php echo date("d-m-Y", strtotime($starDate)); ?>">
-                                <a href="bookTour.php"><button class="btn-order-tour" type="submit"> Đặt tour</button></a>
+                                <a href="login.php?id=<?php echo $idTour; ?>"><button class="btn-order-tour" type="submit"> Đặt tour</button></a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +134,7 @@ include('header.php');
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
-
+<?php include('footer.php') ?>
 </body>
 
 </html>

@@ -49,7 +49,9 @@ include 'header.php';
                 ?>
                             <div class="row room-btm">
                                 <div class="col-md-3 room-left">
-                                    <img src="<?php echo $img; ?>" alt="" class="img-responsive img-list">
+                                    <a href="infoTour.php?id=<?php echo $idTour; ?>">
+                                        <img src="<?php echo $img; ?>" alt="" class="img-responsive img-list">
+                                    </a>
                                 </div>
                                 <div class="col-md-9 room-right ">
                                     <div class="at">
@@ -92,8 +94,8 @@ include 'header.php';
                                 <div class="clearfix"></div>
                             </div>
                 <?php }
-                    }else{
-                        echo '<script type="text/javascript">alert("Không tìm thấy tour xuất phát từ: '.$txt.'");
+                    } else {
+                        echo '<script type="text/javascript">alert("Không tìm thấy tour xuất phát từ: ' . $txt . '");
                         window.location="tour.php"</script>';
                     }
                 } ?>
