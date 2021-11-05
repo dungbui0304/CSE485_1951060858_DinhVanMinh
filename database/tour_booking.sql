@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 05, 2021 lúc 04:41 PM
+-- Thời gian đã tạo: Th10 05, 2021 lúc 06:37 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -43,9 +43,7 @@ CREATE TABLE `tour_booking` (
 --
 
 INSERT INTO `tour_booking` (`book_id`, `book_fullName`, `book_email`, `book_phone`, `book_address`, `book_note`, `book_numberPeople`, `book_numberRoom`) VALUES
-(1, 'phạm thành đạt', 'dat123@gmail.com', '0396179411', 'Hải Dương', 'Thanh Hà-Thanh Hồng', 3, 2),
-(2, 'a', 'minhdv1@gmail.com', '0396179411', 'a', 'a', 2, 2),
-(3, '', 'minhdv12@gmail.com', '', '', '', 1, 0);
+(1, 'phạm thành đạt', 'dat123@gmail.com', '0396179411', 'Hải Dương', 'Thanh Hà-Thanh Hồng', 3, 2);
 
 --
 -- Chỉ mục cho các bảng đã đổ
