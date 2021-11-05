@@ -8,7 +8,7 @@ body,html {
     flex-grow: 0;
 }
 .navbar{
-    background-color: #103c7a;
+    background-color: #d9d9d9;
 }
 
 .carousel-caption {
@@ -16,14 +16,22 @@ body,html {
     top: 40%;
 }
 
-h1 {
-    /* text-shadow: 5px 5px 15px #000; */
+.text-shadow {
+    text-shadow: 5px 5px 15px #000;
+    font-style: italic;
 }
-
+.search-input {
+    outline: none;
+    width: 50%;
+}
+.btn-search {
+    padding: 4px 0;
+}
 .img-link {
     display: block;
     width: 100%;
 }
+
 .img {
     width: 100%;
 }
@@ -39,8 +47,47 @@ h1 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden; 
+    margin-bottom: 10px;
 }
-
+.hp-title {
+  margin: 30px 0 10px 0;
+  padding-left: 12px !important;
+}
+.hp-title .title-inline .style-link-home .name-tour {
+  font-size: 30px;
+  color: #00506c;
+  text-decoration: none;
+  display: block;
+  text-transform: capitalize;
+}
+.rulers {
+  width: 135px;
+  border-bottom: 3px solid #ff9933;
+  margin-bottom: 15px;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+p {
+  margin-bottom: 0;
+}
+.img-item1 button {
+  border: none;
+  background-color: white;
+}
+.price {
+  align-items: center;
+  padding: 10px;
+}
+.font-price {
+  color: #e30051;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  height: 26px;
+}
 /* info tour */
 .tourTitle {
     font-size: 28px;
@@ -269,7 +316,7 @@ ul {
 .content {
     font-size: 14px;
 }
-.email {
+.email-bot {
     outline: none;
     width: 70%;
 }
@@ -293,3 +340,56 @@ ul {
     font-size: 12px;
     padding: 20px;
 }
+/* Css Contact */
+.div_input input{
+    width: 100%;
+    height: 40px;
+    border: solid 1px rgba(0,0,0,.15);
+    padding-left: 10px;
+    outline: none;
+}
+.label {
+    font-size: 12px;
+}
+.btn-contact {
+    width: 50%;
+    height: 40px;
+    background: linear-gradient(
+180deg,#426ac4 0,#0c3e89 100%);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    transition: all .3s linear;
+}
+.phoneWrap {
+    max-width: 280px;
+    border: solid 1px #005be2;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 50px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+.tourName {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #005be2;
+}
+.t1 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.hotline {
+    font-size: 30px;
+    line-height: 45px;
+}
+/* .main {
+    background: url(../img/bg-contact.jpg) no-repeat center top;
+    /* background-size: contain; */
+    /* padding-top: 30px; */
