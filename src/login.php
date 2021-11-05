@@ -14,10 +14,10 @@
 <body class="bg-login">
 <div class="container wrapper">
         <div class="wrap">
-            <form action="process_login.php" method="post"class="form text-center">
+            <form action="" method="post"class="form text-center">
                 <div class="title">Login User</div>
                 <div class="user">
-                    <input class="input" type="text" name="txtName" value="" placeholder="Name">
+                    <input class="input" type="text" name="txtName" value="" placeholder="Email">
                 </div>
                 <div class="psw">
                     <input class="input border-top" type="password" name="txtPass" value="" placeholder="Password">
@@ -35,3 +35,41 @@
 </body>
 
 </html>
+<?php
+    // Dịch vụ bảo vệ:
+    session_start(); //Công ty dịch vụ Bảo vệ
+    if(isset($_POST['btnLogin'])){
+        if(isset($_GET['id'])){
+            $ID = $_GET['id'];
+        }
+        $username = $_POST['txtName'];
+        $password = $_POST['txtPass'];
+        if(empty($password) or empty($username)){
+            echo '<script type="text/javascript"> alert("Vui lòng nhập đầy đủ thông tin ");
+            window.location="login.php"</script>';
+            die();
+        }
+        try{
+            $conn = new PDO("mysql:host=localhost;dbname=db_travel", 'root', '');
+        }catch(PDOException $e){
+            echo "Có lỗi: ".$e->getMessage();
+        }   
+        $stmt = $conn->prepare("SELECT * FROM tour_user WHERE user_email = :user"); 
+        $stmt->bindParam(':user', $username, PDO::PARAM_STR);
+        //$stmt->bindParam(':pass', $password, PDO::PARAM_STR);
+        $stmt->execute();
+        if($stmt->rowCount() > 0){
+
+            $row = $stmt->fetch();
+            $password_hash = $row['user_pass'];
+            if(password_verify($password,$password_hash)){
+            $_SESSION['loginOK'] = $username;
+            echo '<script type="text/javascript"> alert("Đăng nhập thành công ");
+            ;</script>';
+            header("Location:bookTour.php?id= $ID");
+            }
+        }else{
+            header("Location: login.php");
+        }
+    }     
+?>

@@ -7,7 +7,7 @@
         <ul id="menu">
             <li>
                 <a href="dashboard.php">
-                <i class="fas fa-tachometer-slowest"></i>
+                    <i class="fas fa-tachometer-slowest"></i>
                     <span>Dashboard</span>
                     <div class="clearfix"></div>
                 </a>
@@ -18,19 +18,18 @@
                     <div class="clearfix"></div>
                 </a>
                 <ul id="menu-academico-sub">
-                    <li id="menu-academico-avaliacoes"><a href="create-package.php">Create</a></li>
-                    <li id="menu-academico-avaliacoes"><a href="manage_tourPackage.php">Manage</a></li>
+                    <li id="menu-academico-avaliacoes"><a href="create_package.php">Create</a></li>
+                    <li id="menu-academico-avaliacoes"><a href="manage_packages.php">Manage</a></li>
                 </ul>
             </li>
-            <li id="menu-academico"><a href="manage_user.php"><i class="fa fa-users"
-                        aria-hidden="true"></i><span>Manage Users</span>
+            <li id="menu-academico"><a href="manage_user.php"><i class="fa fa-users" aria-hidden="true"></i><span>Manage Users</span>
                     <div class="clearfix"></div>
                 </a></li>
 
             <li><a href="manage_booking.php"><i class="fa fa-bars" aria-hidden="true"></i> <span>Manage Booking</span>
                     <div class="clearfix"></div>
                 </a></li>
-            <li><a href="manageissues.php"><i class="fa fa-table"></i> <span>Manage Issues</span>
+                <li><a href="manage_contact.php"><i class="fa fa-bars" aria-hidden="true"></i> <span>Manage Contact</span>
                     <div class="clearfix"></div>
                 </a></li>
 

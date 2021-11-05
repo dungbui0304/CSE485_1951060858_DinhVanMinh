@@ -14,7 +14,7 @@
         }catch(PDOException $e){
             echo "Có lỗi: ".$e->getMessage();
         }   
-        $stmt = $conn->prepare("SELECT * FROM tour_admin WHERE user_name= :user AND a_password= :pass"); 
+        $stmt = $conn->prepare("SELECT * FROM admin WHERE user_name= :user AND password= :pass"); 
         $stmt->bindParam(':user', $username, PDO::PARAM_STR);
         $stmt->bindParam(':pass', $password, PDO::PARAM_STR);
         $stmt->execute();

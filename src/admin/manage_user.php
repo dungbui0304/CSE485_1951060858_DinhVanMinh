@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assest/css/style.css">
     <link rel="stylesheet" href="./assest/fonts/fontawesome-free-5.15.4/fontawesome-free-5.15.4-web/css/all.min.css">
-    <title>tìm kiểm</title>
+    <title>Manage User</title>
 </head>
 
 <body>
@@ -43,7 +43,6 @@
                         <tr style="height: 80px; line-height:80px;">
                             <th scope="col">ID</th>
                             <th scope="col">Full Name</th>
-                            <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">RegisterDate</th>
@@ -56,7 +55,7 @@
                         }
                         ?>
                         <?php
-                        $sql = "SELECT user_id, user_fullName, user_name, user_email, user_phone, user_registerDate 
+                        $sql = "SELECT user_id, user_fullName, user_email, user_phone, user_registerDate 
             FROM tour_user";
 
 
@@ -66,7 +65,6 @@
                                 echo '<tr style="height: 60px; line-height:60px;">';
                                 echo '<th scope="row">' . $row['user_id'] . '</th>';
                                 echo '<td>' . $row['user_fullName'] . '</td>';
-                                echo '<td>' . $row['user_name'] . '</td>';
                                 echo '<td>' . $row['user_email'] . '</td>';
                                 echo '<td>' . $row['user_phone'] . '</td>';
                                 echo '<td>' . $row['user_registerDate'] . '</td>';
@@ -77,7 +75,9 @@
                     </tbody>
                 </table></br></br>
             </div>
+            <?php include('include/footer.php') ?>
         </div>
+        
             <!-- Optional JavaScript; choose one of the two! -->
 
             <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -88,6 +88,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
+    
 </body>
 
 </html>

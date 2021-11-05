@@ -17,9 +17,6 @@
                 <div class="user_fullName">
                     <input class="input" type="text" name="txtFullname" value="" placeholder="Full Name">
                 </div>
-                <div class="user_name">
-                    <input class="input" type="text" name="txtName" value="" placeholder="User Name">
-                </div>
                 <div class="email">
                     <input class="input" type="email" name="txtEmail" value="" placeholder="Email">
                 </div>
