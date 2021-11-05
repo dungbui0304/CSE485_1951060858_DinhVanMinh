@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 03:59 AM
+-- Thời gian đã tạo: Th10 05, 2021 lúc 04:41 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -24,24 +24,42 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tour_manager`
+-- Cấu trúc bảng cho bảng `admin`
 --
 
-CREATE TABLE `tour_manager` (
-  `tour_id` varchar(255) NOT NULL,
-  `tour_name` varchar(255) NOT NULL,
-  `tour_status` varchar(255) NOT NULL
+CREATE TABLE `admin` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_name` varchar(255) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`id`, `user_name`, `full_name`, `password`) VALUES
+(1, 'admin', 'Công Nghệ Web', 'admin');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `tour_manager`
+-- Chỉ mục cho bảng `admin`
 --
-ALTER TABLE `tour_manager`
-  ADD PRIMARY KEY (`tour_id`);
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT cho các bảng đã đổ
+--
+
+--
+-- AUTO_INCREMENT cho bảng `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

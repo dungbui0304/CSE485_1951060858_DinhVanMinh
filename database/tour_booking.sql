@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 03:56 AM
+-- Thời gian đã tạo: Th10 05, 2021 lúc 04:41 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -24,45 +24,48 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tour_user`
+-- Cấu trúc bảng cho bảng `tour_booking`
 --
 
-CREATE TABLE `tour_user` (
-  `user_id` int(10) UNSIGNED NOT NULL,
-  `user_fullName` varchar(255) NOT NULL,
-  `user_phone` varchar(255) NOT NULL,
-  `user_email` varchar(255) NOT NULL,
-  `user_address` varchar(255) NOT NULL,
-  `user_note` varchar(255) NOT NULL,
-  `user_number_room` int(11) NOT NULL
+CREATE TABLE `tour_booking` (
+  `book_id` int(10) UNSIGNED NOT NULL,
+  `book_fullName` varchar(255) NOT NULL,
+  `book_email` varchar(255) NOT NULL,
+  `book_phone` varchar(255) NOT NULL,
+  `book_address` varchar(255) NOT NULL,
+  `book_note` varchar(255) NOT NULL,
+  `book_numberPeople` int(10) NOT NULL,
+  `book_numberRoom` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `tour_user`
+-- Đang đổ dữ liệu cho bảng `tour_booking`
 --
 
-INSERT INTO `tour_user` (`user_id`, `user_fullName`, `user_phone`, `user_email`, `user_address`, `user_note`, `user_number_room`) VALUES
-(1, 'Phạm Đạt', 'phamdat@gmail.com', '3333333333', 'Hai Duong', 'nnn', 5);
+INSERT INTO `tour_booking` (`book_id`, `book_fullName`, `book_email`, `book_phone`, `book_address`, `book_note`, `book_numberPeople`, `book_numberRoom`) VALUES
+(1, 'phạm thành đạt', 'dat123@gmail.com', '0396179411', 'Hải Dương', 'Thanh Hà-Thanh Hồng', 3, 2),
+(2, 'a', 'minhdv1@gmail.com', '0396179411', 'a', 'a', 2, 2),
+(3, '', 'minhdv12@gmail.com', '', '', '', 1, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Chỉ mục cho bảng `tour_user`
+-- Chỉ mục cho bảng `tour_booking`
 --
-ALTER TABLE `tour_user`
-  ADD PRIMARY KEY (`user_id`);
+ALTER TABLE `tour_booking`
+  ADD PRIMARY KEY (`book_id`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT cho bảng `tour_user`
+-- AUTO_INCREMENT cho bảng `tour_booking`
 --
-ALTER TABLE `tour_user`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `tour_booking`
+  MODIFY `book_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
