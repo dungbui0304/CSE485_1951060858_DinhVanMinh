@@ -17,31 +17,27 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container-fluid">
         <a href="#" class="navbar-brand">
-            <img src="img/logo.png" height="60px" alt="">
+            <img src="assest/img/logo.png" height="60px" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item text-white">
-                <a class="nav-link text-white active" aria-current="page" href="#">
+            <li class="nav-item">
+                <a class="nav-link active" style="font-size:20px; color:#0066B3; font-weight:bold;"  aria-current="page" href="index.php">
                 <i class="fas fa-home"></i>
                     TRANG CHỦ
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="tour.php">
-                <i class="fas fa-plane-arrival"></i>TOUR</a>
+                <a class="nav-link"  style="font-size:20px; color:#0066B3; font-weight:bold; " href="tour.php">TOUR</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">COMBO</a>
+                <a class="nav-link"  style="font-size:20px; color:#0066B3; font-weight:bold;" href="contact.php">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
+                <a class="nav-link"  style="font-size:20px; color:#0066B3; font-weight:bold;" href="admin/dashboard.php"><i class="fas fa-user"></i> ADMIN</a>
             </li>
         </ul>
     </div>

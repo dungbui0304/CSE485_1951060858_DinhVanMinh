@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="./assest/css/style.css">
     <title>Travel Web</title>
 </head>
-
 <body>
     <div class="container">
         <div class="wrap-bot" style="margin:25px 0 0; border-top: 3px solid #0066b3;">
@@ -59,8 +58,8 @@
                         <div class="content">
                             <div class="text-bot">Nhập email để có cơ hội giảm 50% cho chuyến đi tiếp theo của Quý khách
                             </div>
-                            <form action="">
-                                <input class="email" type="text" placeholder="Email của bạn">
+                            <form action="" method="">
+                                <input class="email" type="text" name="sendEmail" placeholder="Email của bạn" required>
                                 <button><i class="far fa-envelope"></i></button>
                             </form>
                         </div>
@@ -72,7 +71,6 @@
                         <div class="content">
                             Số GP/ No: 79-042/ 2019/ TCDL – GPLHQT <br>
                             Do Tổng Cục Du Lịch cấp ngày 11/9/2019 <br>
-
                             <strong>Số ĐKKD: 030 5448 565 được cấp bởi sở kế hoạch và đầu tư TP. Hồ Chí Minh.</strong>
                             <br>
                             Đăng ký lần đầu ngày 11/01/2008, Đăng ký thay đổi lần 05 ngày 26/10/2017
@@ -100,13 +98,8 @@
             </div>
         </div>
     </div>
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-
 </body>
-
 </html>
