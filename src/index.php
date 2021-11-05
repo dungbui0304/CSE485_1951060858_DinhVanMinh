@@ -15,86 +15,45 @@
 
 <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">
-                <img src="" height="60px" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item text-white">
-                        <a class="nav-link text-white active" aria-current="page" href="index.php">
-                            <i class="fas fa-home"></i>
-                            TRANG CHỦ
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="" >
-                            <i class="fas fa-plane-arrival"></i>TOUR</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">COMBO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">KHÁCH SẠN</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#"><i class="fas fa-user"></i>ĐĂNG NHẬP</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include'header.php' ?>
     <!-- slider -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <h1>TRAVEL</h1>
-                    <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn">Tìm kiếm</button>
-                </div>
+        <form action="search.php" method="POST">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-item">
-                <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <h1>TRAVEL</h1>
-                    <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn">Tìm kiếm</button>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assest/img/slider1.png" class="d-block w-100" alt="...">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img src="./assest/img/slider2.png" class="d-block w-100" alt="...">
+                    
+                </div>
+                <div class="carousel-item">
+                    <img src="./assest/img/slider3.jpg" class="d-block w-100" alt="...">
+                   
+                </div>
 
-                </div>
             </div>
-            <div class="carousel-item">
-                <img src="./assest/img/slider.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption  d-md-block">
-                    <h1>TRAVEL</h1>
-                    <input type="text" placeholder="Bạn muốn đi đâu?">
-                    <button type="button" class="btn">Tìm kiếm</button>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </form>
     </div>
     <!-- Locations -->
     <div class="container">
         <div class="col-md-12  hp-title">
-            <h3 class="title-inline " >
+            <h3 class="title-inline ">
                 <a href="" class="style-link-home">
                     <span class="name-tour">Tour hot </span>
                 </a>
@@ -111,7 +70,8 @@
             $sql = "SELECT * FROM tour_info ";
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
+                while ($row = mysqli_fetch_assoc($result) ) {
+                    $i = 0;$i++;
                     $idTour = $row['tour_id'];
                     $time = $row['time'];
                     $starDate = $row['starting_date'];
@@ -132,7 +92,7 @@
                                 </button>
                             </div>
                             <div class="descriptions">
-                                <p class="tittle">Du lịch <?php echo $destination; ?> từ <?php echo $startGate; ?></p>
+                                <p class="tittle">Du lịch <?php echo $destination ?> từ <?php echo $startGate; ?></p>
                                 <div class="row">
                                     <div class="col-md-5">
                                         <p> <i class="fas fa-calendar"></i>Đang cập nhật</p>
@@ -144,7 +104,7 @@
                                             <input readonly type="hidden" name="txt" value="<?php echo $idTour; ?>">
                                         </div>
                                         <div class="price font-price">
-                                            <?php echo number_format($price); ?> đ
+                                            <?php echo number_format($price) ?> đ
                                         </div>
                                     </div>
                                 </div>
@@ -164,10 +124,3 @@
 </body>
 
 </html>
-<?php
-if (isset($_POST['clickImg'])) {
-    $idTour1 = $_POST['id'];
-    echo $idTour1;
-}
-
-?>

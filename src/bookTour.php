@@ -48,69 +48,63 @@
                             </li>
                         </ul>
                     </div>
+                </div>
             </nav>
         </div></br></br>
     </div>
     <!-- <div class="container"> -->
     <div class="row bg-gray">
-        <div class="col-md-2 "></div>
+        <div class="col-md-1"></div>
+        <dvi class="col-md-10 ">
+            <div class="row">
+                <div class="col-md-5 ">
+                    <img class="img-fluid" src="https://pystravel.vn/caches/medium/posts/avatar/1634184994.jpg">
+                </div>
+                <div class="col-md-7 item-info-booking  border">
+                    <h2>
+                        Hà Nội - Hòa Bình BaKhan Resort 4 sao 2 ngày 1 đêm
+                    </h2>
+                    <div class="item">
+                        <p class="font-14 text-500 padding-top-10-tablet ">
+                            
+                            <div class="at"><i class="fas fa-home text-gray"></i>Điểm khởi hành</div>
+                            <div class="as"></div>
+                        <br>
+                        <i class="far fa-clock text-icon page_speed_1227319642"></i>
+                        <span>
+                            2 ngày 1 đêm
+                        </span>
 
-        <dvi class="col-md-8 ">
-            <div class="item-info-combo">
-                <div class="styl-image-booking">
-                    <div class="row">
-                        <div class="col-md-5 img-booking ">
-                            <img class="img-fluid" src="https://pystravel.vn/caches/medium/posts/avatar/1634184994.jpg">
+                        <br>
+                        <i class="fas fa-map-marked-alt text-gray"></i>
+                        <span>
+                            Điểm đến:
+                            Hòa Bình
+                        </span>
+                        <br>
+                        <i class="fas fa-map-marked-alt text-gray"></i>
+                        <span>
+                            Điểm đến:
+                            Hòa Bình
+                        </span>
+                        <div class="form-group col-md-12">
+                            <input type="hidden" id="sumary-hidden" value="3499000">
+                            <div class="txtTotal">Tổng giá trị : <span id="sumary">3,499,000</span> <span>đ</span></div>
                         </div>
-                        <div class="col-md-7 item-info-booking booking-info-tour border">
-                            <p class="margin-custom text-title">
-                                Hà Nội - Hòa Bình BaKhan Resort 4 sao 2 ngày 1 đêm
-                            </p>
-                            <div class="item-booking">
-                                <p class="font-14 text-500 padding-top-10-tablet margin-custom page_speed_174317768">
-                                    <i class="fas fa-home text-gray"></i>
-                                    <span>
-                                        Khởi hành từ:
-                                        Hà Nội
-                                    </span>
-
-                                    <br>
-                                    <i class="far fa-clock text-icon page_speed_1227319642"></i>
-                                    <span>
-                                        2 ngày 1 đêm
-                                    </span>
-
-                                    <br>
-                                    <i class="fas fa-map-marked-alt text-gray"></i>
-                                    <span>
-                                        Điểm đến:
-                                        Hòa Bình
-                                    </span>
-
-                                    <br>
-                                    <i class="fas fa-map-marked-alt text-gray"></i>
-                                    <span>
-                                        Điểm đến:
-                                        Hòa Bình
-                                    </span>
-                                <div class="form-group col-md-12">
-                                    <input type="hidden" id="sumary-hidden" value="3499000">
-                                    <div class="txtTotal">Tổng giá trị : <span id="sumary">3,499,000</span> <span>đ</span></div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
+                        </p>
                     </div>
                 </div>
             </div>
         </dvi>
-        <div class="col-md-2 "></div>
+        <div class="col-md-1 "></div>
     </div></br></br>
+
     <!-- </div> -->
-    <form action="process_bookTour.php" method="post">
+    <form action="" method="POST">
         <div class="mda-tilte-3">
             <span class="mda-tilte-name">Thông Tin Liên Hệ</span>
         </div>
+
         <div id="mda-guest-b" class="">
             <div class="container">
                 <div class="row">
@@ -138,7 +132,7 @@
 
                     <div class="form-group col-md-4">
                         <label for="l">Người lớn: </label>
-                        <input type="number" name="QAdult" class="form-control " value="1" min="1" max="20">
+                        <input type="number" name="QAdult" class="form-control " value="0" min="1" max="20">
                     </div>
                     <div class="form-group col-md-4">
                         <label>Trẻ em : </label>
@@ -153,8 +147,11 @@
                         <div class="txtTotal">Tổng giá trị : <span id="sumary">3,499,000</span> <span>đ</span></div>
                     </div>
                     <div class="text-center" style="margin-top: 10px">
-                        <input class="btn-primary btn" type="submit" name="btnSuccess" value="HOÀN THÀNH">
+                        <a href="tourList.php"></a><input class="btn-primary btn" type="submit" name="btnSuccess" value="HOÀN THÀNH">
                     </div>
+                    <!-- <div class="text-center" style="margin-top: 10px">
+                        <input class="btn-primary btn" type="submit" name="btnSuccess" value="HOÀN THÀNH">
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -162,3 +159,28 @@
 </body>
 
 </html>
+
+<?php
+if (isset($_POST['btnSuccess'])) {
+    $Name = $_POST['txtName'];
+    $Mail = $_POST['txtEmail'];
+    $Phone = $_POST['txtPhone'];
+    $Address = $_POST['txtAddress'];
+    $Note = $_POST['txtNote'];
+    $Room = $_POST['txtRoom'];
+    $conn = mysqli_connect('localhost', 'root', '', 'db_travel');
+    if (!$conn) {
+        die("Không thể kết nối !");
+    }
+    $sql = "INSERT INTO tour_booking(book_fullName, book_email, book_phone, book_address, book_note, book_numberPeople, book_numberRoom) 
+        VALUES ('$Name','$Mail','$Phone','$Address','$Note','$Number','$Room]')";
+    $result = mysqli_query($conn, $sql);
+    if ($result == true) {
+        $_SESSION['book'] = "<h1> Thành công</h1>";
+        echo '<script type="text/javascript"> alert("Book tour thành công");</script>';
+    } else {
+        $_SESSION['book'] = "<h1> Thất bại</h1>";
+        echo '<script type="text/javascript"> alert("Book tour thất bại");</script>';
+    }
+}
+?>
