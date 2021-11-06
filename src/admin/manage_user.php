@@ -46,6 +46,7 @@
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
                             <th scope="col">RegisterDate</th>
+                            <th scope="col">Delete</th>
                     </thead>
                     <tbody>
                         <?php
@@ -68,6 +69,7 @@
                                 echo '<td>' . $row['user_email'] . '</td>';
                                 echo '<td>' . $row['user_phone'] . '</td>';
                                 echo '<td>' . $row['user_registerDate'] . '</td>';
+                                echo '<td><a href="delete.php?id='.$row['user_id'].'"><i class="fas fa-user-times"></i></a></td>';
                                 echo '</tr>';
                             }
                         }
