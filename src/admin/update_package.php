@@ -21,7 +21,7 @@
         if(file_exists("$img")) {
             echo'<script type="text/javascript">alert("Hình ảnh đã tồn tại")</script>';
         }else {
-        move_uploaded_file($_FILES['image']['tmp_name'],'assest/img/'.$_FILES['image']['name']);
+        move_uploaded_file($_FILES['image']['tmp_name'],'./assest/img/'.$_FILES['image']['name']);
         move_uploaded_file($_FILES['image']['tmp_name'],'../assest/img/'.$_FILES['image']['name']);
             $sql = "UPDATE tour_info SET 
             tour_price='$tour_price',

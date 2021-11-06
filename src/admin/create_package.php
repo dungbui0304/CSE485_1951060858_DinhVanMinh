@@ -10,6 +10,7 @@
         $description =$_POST['des'];
         echo $description;
         $img = 'assest/img/'.$_FILES["image"]["name"];
+        move_uploaded_file($_FILES["image"]["tmp_name"],"assest/img/".$_FILES["image"]["name"]);
         move_uploaded_file($_FILES["image"]["tmp_name"],"../assest/img/".$_FILES["image"]["name"]);
     include('include/config.php');
     $sql = "INSERT INTO tour_info (tour_price,starting_gate,destination,starting_date,ending_date,time,tour_traffic,description,img)
