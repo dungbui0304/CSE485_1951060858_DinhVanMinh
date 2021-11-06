@@ -240,6 +240,7 @@ ul {
 .wrap{
   background-color:#fff ;
   border-radius: 4px;
+  width: 460px;
 }
 .title {
   font-size: 30px;
