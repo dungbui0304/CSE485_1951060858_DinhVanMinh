@@ -1,5 +1,8 @@
 <?php
     if(isset($_POST['btnRegister'])){
+        if(isset($_GET['id'])){
+            $id = $_GET['id'];
+        }
         $fullname = $_POST['txtFullname'];
         $email = $_POST['txtEmail'];
         $pass1 = $_POST['txtPass01'];
@@ -40,7 +43,8 @@ else{
     $result2 = mysqli_query($conn, $sql2);
 
     if($result2 >= 1 ){
-        echo '<script language="javascript">alert("Đăng kí thành công"); window.location="bookTour.php";</script>';
+        echo '<script language="javascript">alert("Đăng kí thành công"); ;</script>';
+        header("Location:index.php");
     }else{
         echo '<script language="javascript">alert("Có lỗi trong quá trình xử lý"); window.location="register.php";</script>';
     }

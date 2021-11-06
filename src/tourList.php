@@ -26,14 +26,6 @@ if (!isset($_SESSION['loginOK'])) {
             <h1>Đăng Ký Thành Công</h1>
         </div>
         <?php
-        // if (isset($_POST['btnSuccess'])) {
-        //     $Name = $_POST['txtName'];
-        //     $Mail = $_POST['txtEmail'];
-        //     $Phone = $_POST['txtPhone'];
-        //     $Address = $_POST['txtAddress'];
-        //     $Note = $_POST['txtNote'];
-        //     $Number = $_POST['txtNumber'];
-        //     $Room = $_POST['txtRoom'];
         if(isset($_GET['mail'])){
             $mail = $_GET['mail'];
         }
@@ -72,11 +64,11 @@ if (!isset($_SESSION['loginOK'])) {
                         <input name="txtNote" class="form-control text_area" id="note"value="<?php echo $row_current['book_note']; ?> "></input>
                     </div>
 
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-5">
                         <label>Số lượng người: </label>
                         <input type="text" name="txtNumber" class="form-control "value="<?php echo $row_current['book_numberPeople']; ?> ">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-5">
                         <label for="slphongdon">Số lượng phòng đơn </label>
                         <input type="text" name="txtRoom" id="slphongdon" class="form-control"value="<?php echo $row_current['book_numberRoom']; ?> ">
                     </div>

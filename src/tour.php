@@ -51,7 +51,8 @@
                 ?>
                         <div class="row room-btm">
                             <div class="col-md-3 room-left">
-                                <a href="infoTour.php?id=<?php echo $idTour; ?>"><img src="<?php echo $img; ?>" alt="" class="img-responsive img-list"></a>
+                                <a href="infoTour.php?id=<?php echo $idTour; ?>">
+                                <img src="<?php echo 'admin/'.$img; ?>" alt="" class="img-responsive img-list"></a>
                             </div>
                             <div class="col-md-9 room-right ">
                                 <div class="at">

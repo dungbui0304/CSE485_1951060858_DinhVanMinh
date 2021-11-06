@@ -16,14 +16,14 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-        <?php include('header.php') ?>
+            <?php include('header.php') ?>
         </div></br></br>
     </div>
     <!-- <div class="container"> -->
     <div class="row bg-gray">
         <!-- <div class="col-md-2"></div> -->
         <?php
-        if(isset($_GET['id'])){
+        if (isset($_GET['id'])) {
             $idd = $_GET['id'];
         }
         $conn = mysqli_connect('localhost', 'root', '', 'db_travel');
@@ -109,33 +109,33 @@
                 <div class="row">
                     <div class="form-group col-md-4">
                         <label for="name">HỌ TÊN *: <span id="bookNameError" class="error"></span></label>
-                        <input type="text" name="txtName" id="name" class="form-control input-tracking1">
+                        <input required type="text" name="txtName" id="name" class="form-control input-tracking1 ">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="email">Email*:<span id="bookEmailError" class="error"></span></label>
-                        <input type="text" name="txtEmail" id="email" class="user-email form-control ">
+                        <input required type="text" name="txtEmail" id="email" class="user-email form-control ">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="phone">Số điện thoại *:<span id="bookPhoneError" class="error"></span></label>
-                        <input type="text" name="txtPhone" id="phone" class="form-control numeric  ">
+                        <input required type="text" name="txtPhone" id="phone" class="form-control numeric  ">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="address">Địa chỉ *:</label>
-                        <textarea type="text" name="txtAddress" id="address" class="form-control text_area"></textarea>
+                        <textarea required type="text" name="txtAddress" id="address" class="form-control text_area"></textarea>
                     </div>
                     <div class="form-group col-md-8">
                         <label for="note">Ghi chú:</label>
-                        <textarea name="txtNote" class="form-control text_area" id="note"></textarea>
+                        <textarea required name="txtNote" class="form-control text_area" id="note"></textarea>
                     </div>
 
                     <div class="form-group col-md-6">
                         <label for="l">Số lượng người: </label>
-                        <input type="number" name="txtNumber" class="form-control " value="1" min="1" max="20">
+                        <input required type="number" name="txtNumber" class="form-control " value="1" min="1" max="20">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="slphongdon">Số lượng phòng đơn </label>
-                        <input type="number" name="txtRoom" id="slphongdon" class="form-control" min="0" value="0">
+                        <input required type="number" name="txtRoom" id="slphongdon" class="form-control" min="0" value="0">
                     </div>
                     <div class="text-center" style="margin-top: 10px">
                         <input class="btn-primary btn" type="submit" name="btnSuccess" value="HOÀN THÀNH">
@@ -144,6 +144,7 @@
             </div>
         </div>
     </form></br></br>
+    <?php include('footer.php'); ?>
 </body>
 
 </html>

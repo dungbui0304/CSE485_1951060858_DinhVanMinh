@@ -78,7 +78,7 @@
                             <div class="img-item1">
                                 <button type="submit" name="btn">
                                     <a href="" class="img-link">
-                                        <img src="<?php echo $img; ?>" alt="" class="img">
+                                        <img src="<?php echo 'admin/'.$img; ?>" alt="" class="img">
                                     </a>
                                 </button>
                             </div>

@@ -16,13 +16,13 @@
         $time =$_POST['time'];
         $tour_traffic =$_POST['traffic'];
         $description = $_POST['des'];
-        $img = 'assest/img/'.$_FILES["image"]["name"];
-        echo $img;
+        $img = 'assest/img/'.$_FILES['image']['name'];
         $old_img = $_POST['old_img'];
         if(file_exists("$img")) {
             echo'<script type="text/javascript">alert("Hình ảnh đã tồn tại")</script>';
         }else {
-        move_uploaded_file($_FILES["image"]["tmp_name"],"assest/img/".$_FILES["image"]["name"]);
+        move_uploaded_file($_FILES['image']['tmp_name'],'assest/img/'.$_FILES['image']['name']);
+        move_uploaded_file($_FILES['image']['tmp_name'],'../assest/img/'.$_FILES['image']['name']);
             $sql = "UPDATE tour_info SET 
             tour_price='$tour_price',
             starting_gate='$starting_gate',
@@ -36,6 +36,7 @@
         $result = mysqli_query($conn,$sql);
         if($result == true) {
             unlink("$old_img");
+            unlink('../'.$old_img);
             header('Location: dashboard.php');
         }else {
             echo 'error';

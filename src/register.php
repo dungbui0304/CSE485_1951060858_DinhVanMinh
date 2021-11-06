@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assest/css/style.css">
 </head>
 
+
 <body class="bg-login" action="process_register.php" method="POST">
     <div class="container wrapper">
         <div class="wrap">
@@ -32,7 +33,9 @@
                 <div class="user_registerDate">
                     <input class="input border-top" type="date" name="txtDate" value="" placeholder="Register Date">
                 </div>
-                <button class="btn btn-log" type="submitRegiter" name="btnRegister">SIGN UP</button>
+                <!-- <a href="process_register.php?id=<?php echo $id; ?>"> -->
+                    <button class="btn btn-log" type="submitRegiter" name="btnRegister">SIGN UP</button>
+                <!-- </a> -->
             </form>
             <p class="text">Already have an account? <a href="login.php" class="text-link">Login here</a></p>
         </div>
